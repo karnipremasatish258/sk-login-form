@@ -234,50 +234,52 @@ const App = () => {
             </div>
           </form>
         ) : (
-          <form onSubmit={handleSubmit(onSubmitForm)}>
-            <div className="texts">
-              <TextField
-                {...register("username", {
-                  required: {
-                    value: true,
-                    message: "username required",
-                  },
-                })}
-                className="outlined-basic"
-                id="username"
-                label="username"
-                variant="outlined"
-              />
-              <p>{errors.username?.message}</p>
-            </div>
-            <div className="texts">
-              <TextField
-                {...register("password", {
-                  required: {
-                    value: true,
-                    message: "password required",
-                  },
-                })}
-                className="outlined-basic"
-                id="password"
-                label="password"
-                variant="outlined"
-                type="password"
-              />
-              <p>{errors.password?.message}</p>
-            </div>
-            <div className="buttons">
-              <Button type="submit" variant="contained">
-                Sign in
-              </Button>
-              <h1 className="signedup">
-                New User? &nbsp;
-                <Link onClick={() => setPage("SignUp")} href="#">
-                  Click here
-                </Link>
-              </h1>
-            </div>
-          </form>
+          <div className="card">
+            <form onSubmit={handleSubmit(onSubmitForm)}>
+              <div className="texts">
+                <TextField
+                  {...register("username", {
+                    required: {
+                      value: true,
+                      message: "username required",
+                    },
+                  })}
+                  className="outlined-basic"
+                  id="username"
+                  label="username"
+                  variant="outlined"
+                />
+                <p>{errors.username?.message}</p>
+              </div>
+              <div className="texts">
+                <TextField
+                  {...register("password", {
+                    required: {
+                      value: true,
+                      message: "password required",
+                    },
+                  })}
+                  className="outlined-basic"
+                  id="password"
+                  label="password"
+                  variant="outlined"
+                  type="password"
+                />
+                <p>{errors.password?.message}</p>
+              </div>
+              <div className="buttons">
+                <Button type="submit" variant="contained">
+                  Sign in
+                </Button>
+                <h1 className="signedup">
+                  New User? &nbsp;
+                  <Link onClick={() => setPage("SignUp")} href="#">
+                    Click here
+                  </Link>
+                </h1>
+              </div>
+            </form>
+          </div>
         )}
       </div>
     </div>
