@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+* {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_1280.png");
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  padding: 4rem;
+  height: 50vh;
+  background-color: rgb(255, 252, 252);
+  border-radius: 0.7rem;
+  overflow-y: scroll;
+  transition-duration: 0.7s;
+  opacity: 0.9;
+}
+
+.card:hover {
+  transition-duration: 0.7s;
+  box-shadow: 0 0 2.5rem rgb(255, 255, 255);
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+.texts {
+  margin: 1rem;
+  width: 300px;
+}
+.outlined-basic {
+  width: 300px;
+}
+
+.registerHeading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(0, 95, 183);
+  text-shadow: 0 0 2rem rgb(0, 99, 191);
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1rem;
+  place-items: initial;
+  text-align: left;
+}
+
+.signedup {
+  font-size: 0.8rem;
+}
+p {
+  font-size: 10px;
+  color: red;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 1rem;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.7rem;
+    box-shadow: 0 0 2.5rem rgb(255, 255, 255);
+    overflow-y: scroll;
+  }
+  .texts {
+    margin: 1rem;
+    width: 200px;
+  }
+  .outlined-basic {
+    width: 240px;
+  }
+}
+
+Button {
+  background-color: black;
+}
